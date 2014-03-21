@@ -2,7 +2,7 @@
   "builders": [
     {
       "type": "virtualbox-iso",
-      "iso_url": "win7.iso",
+      "iso_url": "/run/media/yue/Backup/os_imgs/X17-59465.iso",
       "iso_checksum_type": "none",
       "iso_checksum": "",
       "headless": false,
@@ -15,14 +15,14 @@
       "disk_size": 61440,
       "floppy_files": [
           "./res/Autounattend.xml",
-          "./res/dis-updates.ps1",
           "./res/openssh.ps1",
+          "./res/dis-updates.ps1",
           "./res/win-updates.ps1",
           "./res/oracle-cert.cer"
       ],
       "vboxmanage": [
           ["modifyvm", "{{.Name}}", "--memory", "2048"],
-          ["modifyvm", "{{.Name}}", "--cpus", "1"]
+          ["modifyvm", "{{.Name}}", "--cpus", "2"]
       ]
     }
   ],
@@ -38,6 +38,11 @@
       {
           "type": "shell",
           "inline": ["rm -rf /tmp/*"]
-      }
+      },
+      {
+         "type": "file",
+         "source": "./kde",
+         "destination": "C:/kde"
+}
   ]
 }

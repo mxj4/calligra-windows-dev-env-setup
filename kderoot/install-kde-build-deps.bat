@@ -1,0 +1,1 @@
+start http://boxstarter.org/package/chocolatey,cmake,7zip,git,python.x86,VisualStudio2012WDX

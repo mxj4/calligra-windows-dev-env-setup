@@ -41,8 +41,8 @@
       },
       {
          "type": "file",
-         "source": "./kde",
-         "destination": "C:/kde"
+         "source": "./kderoot",
+         "destination": "C:/kderoot"
 }
   ]
 }
